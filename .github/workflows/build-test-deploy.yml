@@ -24,6 +24,8 @@ jobs:
         with:
           node-version: '18.x'
       - run: npm ci
+      - run: npm audit fix --force
+      - run: npm audit
       - run: npm test
       
   deploy:
